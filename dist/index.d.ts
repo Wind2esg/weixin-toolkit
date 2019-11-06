@@ -12,6 +12,7 @@ interface WechatServiceParams {
     params: any;
 }
 export declare class WeixinToolkit {
+    wx: any;
     constructor(wechatServiceParams: WechatServiceParams, apiList: Array<string>, debug?: boolean, axiosDefault?: string);
 }
 export {};

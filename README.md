@@ -37,7 +37,9 @@ install
 
 for commonjs and ts  
 ```
-new WeixinToolkit(
+import { WeixinToolkit } from 'weixin-toolkit';
+
+new wxtk = WeixinToolkit(
     // centre control service param
     {
         url: "<centre service url>",
@@ -53,7 +55,10 @@ new WeixinToolkit(
     // optional param, if your centre control service require json data
     // 'json'
 )
+
+wxtk.wx.chooseImage({...})
 ```
+
 
 ## link
 Looking for centre service?  

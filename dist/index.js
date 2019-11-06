@@ -19,9 +19,9 @@ class WeixinToolkit {
     constructor(wechatServiceParams, apiList, debug, axiosDefault) {
         let params = (axiosDefault && axiosDefault === 'json') ? wechatServiceParams.params : querystring_1.default.stringify(wechatServiceParams.params);
         axios_1.default.post(wechatServiceParams.url, params).then((response) => {
-            console.log(weixin_sdk_js_1.default);
+            this.wx = weixin_sdk_js_1.default;
             let wxconfig = response.data;
-            weixin_sdk_js_1.default.config({
+            this.wx.config({
                 debug: debug ? debug : false,
                 appId: wxconfig["appId"],
                 timestamp: wxconfig["timestamp"],

@@ -18,15 +18,16 @@ interface WechatServiceParams{
 }
 
 export class WeixinToolkit{
+  public wx: any;
   constructor(wechatServiceParams: WechatServiceParams, apiList:Array<string>, debug?: boolean, axiosDefault?: string){
     let params = (axiosDefault && axiosDefault === 'json')? wechatServiceParams.params : querystring.stringify(wechatServiceParams.params);
     axios.post(
         wechatServiceParams.url,
         params
         ).then((response)=>{
-          console.log(wx);
+          this.wx = wx;
           let wxconfig = response.data;
-          wx.config({
+          this.wx.config({
             debug: debug ? debug : false ,
             appId: wxconfig["appId"],
             timestamp: wxconfig["timestamp"],

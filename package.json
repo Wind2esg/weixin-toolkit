@@ -3,7 +3,7 @@
   "email": "wind2esg@gmail.com",
   "license": "MIT",
   "name": "weixin-toolkit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "轻松使用微信 js-sdk！ez access to wechat js functions with wechat js sdk centre service",
   "main": "dist/index.js",
   "type": "dist/index.d.ts",
