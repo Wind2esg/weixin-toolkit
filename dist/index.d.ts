@@ -1,23 +1,17 @@
 /**
- * Wechat share link to friends or timeline
+ * Wechat js toolkit
  *
  * @author wind2esg
- * @date 20191015
+ * @date 20191106
  *
- * ez access to wechat share with wechat js sdk centre service
+ * ez access to wechat js function with centre service
+ * hot plug-in api
  */
-export interface WechatServiceParams {
+interface WechatServiceParams {
     url: string;
     params: any;
 }
-interface WechatShareParams {
-    debug: boolean;
-    title: string;
-    desc: string;
-    link: string;
-    imgUrl: string;
-}
-export declare class WeixinShareLink {
-    constructor(wechatShareParams: WechatShareParams, wechatServiceParams: WechatServiceParams, axiosDefault?: string);
+export declare class WeixinToolkit {
+    constructor(wechatServiceParams: WechatServiceParams, apiList: Array<string>, debug?: boolean, axiosDefault?: string);
 }
 export {};
